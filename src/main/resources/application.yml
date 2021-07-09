@@ -1,0 +1,19 @@
+app:
+  allow-get-customers: ${customers.allow-get-customers}
+
+
+spring:
+  application:
+    name: customers
+  profiles:
+    active: production
+
+
+
+info:
+  app:
+    name: "Customers"
+    version: "0.0.1"
+    profile: ${spring.profiles.active}
+  serverInfo:
+    port: ${server.port}
