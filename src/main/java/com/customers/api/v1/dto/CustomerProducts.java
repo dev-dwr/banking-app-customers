@@ -5,8 +5,8 @@ import lombok.*;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
 @Builder
+@RequiredArgsConstructor
 @AllArgsConstructor
 public class CustomerProducts {
     private Long customerId;

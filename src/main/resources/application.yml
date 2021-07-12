@@ -1,10 +1,6 @@
 app:
   allow-get-customers: ${customers.allow-get-customers}
 
-eureka:
-  client: ${eureka-client}
-
-
 spring:
   application:
     name: customers
@@ -20,3 +16,4 @@ info:
     profile: ${spring.profiles.active}
   serverInfo:
     port: ${server.port}
+

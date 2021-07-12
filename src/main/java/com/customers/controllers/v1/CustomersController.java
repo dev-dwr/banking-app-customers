@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -19,8 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("v1/customers")
-@RefreshScope
+@RequestMapping(value = "/v1/customers", produces = {MediaType.APPLICATION_JSON_VALUE})
 @RequiredArgsConstructor
 public class CustomersController {
 
@@ -28,6 +28,8 @@ public class CustomersController {
     private final ProductService productService;
     @Value("${app.allow-get-customers}")
     private boolean allowGetCustomers;
+
+
 
     @GetMapping("/{customerId}")
     public CustomerDto findCustomerById(@PathVariable("customerId") Long customerId){
