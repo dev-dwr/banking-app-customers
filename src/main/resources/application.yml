@@ -7,7 +7,9 @@ spring:
   profiles:
     active: production
 
-
+feign:
+  hystrix:
+    enabled: true
 
 info:
   app:
