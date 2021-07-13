@@ -15,13 +15,11 @@ import java.util.stream.Collectors;
 * */
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class AccountProvider {
 
     private final AccountsConnector accountsConnector;
 
-    public AccountProvider(AccountsConnector accountsConnector) {
-        this.accountsConnector = accountsConnector;
-    }
 
     public List<AccountDto> getCustomerAccounts(Long customerId){
 

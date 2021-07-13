@@ -1,5 +1,6 @@
 package com.customers.controllers.v1;
 
+import com.customers.api.v1.dto.CardDto;
 import com.customers.api.v1.dto.CustomerDto;
 import com.customers.api.v1.dto.CustomerProducts;
 import com.customers.api.v1.dto.AccountDto;
@@ -46,10 +47,13 @@ public class CustomersController {
 
         List<AccountDto> customerAccounts = productService.findCustomerAccounts(customerId);
 
+        List<CardDto> customerCards = productService.findCustomerCards(customerId);
+
         return CustomerProducts.builder()
                 .customerId(customerDto.getCustomerId())
                 .fullName(customerDto.getFirstName() + " " + customerDto.getLastName())
                 .accounts(customerAccounts)
+                .cards(customerCards)
                 .build();
     }
 
