@@ -7,15 +7,15 @@ spring:
   profiles:
     active: production
 
-feign:
-  hystrix:
-    enabled: false
-
-accounts:
-  ribbon:
-    listOfServers: http://localhost:7777
-    eureka:
-      enabled: false
+#feign:
+#  hystrix:
+#    enabled: false
+#
+#accounts:
+#  ribbon:
+#    listOfServers: http://localhost:7777
+#    eureka:
+#      enabled: false
 
 info:
   app:
