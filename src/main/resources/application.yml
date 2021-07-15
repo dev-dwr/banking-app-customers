@@ -9,7 +9,13 @@ spring:
 
 feign:
   hystrix:
-    enabled: true
+    enabled: false
+
+accounts:
+  ribbon:
+    listOfServers: http://localhost:7777
+    eureka:
+      enabled: false
 
 info:
   app:
@@ -18,4 +24,5 @@ info:
     profile: ${spring.profiles.active}
   serverInfo:
     port: ${server.port}
-
+server:
+  port: 8887
